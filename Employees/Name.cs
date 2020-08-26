@@ -11,24 +11,16 @@
             LastName = "N/A";
         }
 
-        public Name(string firstName) 
+        public Name(string firstName) : this()
         {
             if (CheckNameLenght(firstName)) FirstName = firstName;
             else throw new NameToLongOrShort();
-            LastName = "N/A";
         }
 
-        public Name(string firstName, string lastName)
+        public Name(string firstName, string lastName) : this(firstName)
         {
-            if (CheckNameLenght(firstName) && CheckNameLenght(lastName))
-            {
-                FirstName = firstName;
-                LastName = lastName;
-            }
-            else
-            {
-                throw new NameToLongOrShort();
-            }
+            if (CheckNameLenght(lastName)) LastName = lastName;
+            else throw new NameToLongOrShort();
         }
 
         private bool CheckNameLenght(string name)

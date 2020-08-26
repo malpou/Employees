@@ -13,15 +13,13 @@ namespace Employees
             Info = new Information();
         }
 
-        public Employee(string firstName, string lastName) 
+        public Employee(string firstName, string lastName) : this()
         { 
             Name = new Name(firstName, lastName);
-            Info = new Information();
         }
 
-        public Employee(string firstName, Information.Jobs job, decimal salary, DateTime hired)
+        public Employee(string firstName, string lastName, Information.Jobs job, decimal salary, DateTime hired) : this(firstName, lastName)
         {
-            Name = new Name(firstName);
             Info = new Information(job, salary, hired);
         }
 

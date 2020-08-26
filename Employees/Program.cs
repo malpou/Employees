@@ -15,9 +15,9 @@ namespace Employees
 
             try { e2 = new Employee("Malthe", "Poulen"); }
             catch (Exception e) { Console.WriteLine(e.Message); }
-            try { e3 = new Employee("Jane", Information.Jobs.Manager, 60000.50m, new DateTime(2008, 5, 20)); }
+            try { e3 = new Employee("Jane", "Doe", Information.Jobs.Manager, 60000.50m, new DateTime(2008, 5, 20)); }
             catch (Exception e) { Console.WriteLine(e.Message); }
-            try { e4 = new Employee("M", Information.Jobs.Student, 250000, new DateTime(2012, 1, 5)); }
+            try { e4 = new Employee("M", "P",  Information.Jobs.Student, 250000, new DateTime(2012, 1, 5)); }
             catch (Exception e) { Console.WriteLine(e.Message); }
 
             Console.ReadKey(true);
